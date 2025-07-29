@@ -23,7 +23,7 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  setTimeout(() => alert(`Logged in as ${name}`), 0);
+  alert(`Logged in as ${name}`);
 
   if (checkbox.checked) {
     localStorage.setItem("username", name);
@@ -40,6 +40,6 @@ form.addEventListener("submit", function (e) {
 existingBtn.addEventListener("click", function () {
   const savedUser = localStorage.getItem("username");
   if (savedUser) {
-    setTimeout(() => alert(`Logged in as ${savedUser}`), 0);
+    alert(`Logged in as ${savedUser}`);;
   }
 });
