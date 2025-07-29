@@ -22,10 +22,12 @@ form.addEventListener("submit", function (e) {
     alert("Enter both fields!");
     return;
   }
+	function showAlert(msg) {
+	  window.alert(msg);
+	}
 
-  setTimeout(() => {
-  alert(`Logged in as ${name}`);
-}, 0);
+	
+  showAlert(`Logged in as ${name}`);
 
   if (checkbox.checked) {
     localStorage.setItem("username", name);
@@ -42,9 +44,8 @@ form.addEventListener("submit", function (e) {
 existingBtn.addEventListener("click", function () {
   const savedUser = localStorage.getItem("username");
   if (savedUser) {
-  setTimeout(() => {
-    alert(`Logged in as ${savedUser}`);
-  }, 0);
+  showAlert(`Logged in as ${savedUser}`);
+
 }
 
 });
